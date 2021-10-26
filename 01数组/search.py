@@ -12,3 +12,4 @@ class Solution:
                 left = temp+1
         else:
             return -1
+# test
