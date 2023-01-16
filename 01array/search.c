@@ -52,4 +52,5 @@ int main()
     int target = 9;
     return_value =  search(nums, nums_size, target);
     printf("return value:%d", return_value);
+    return 0;
 }
