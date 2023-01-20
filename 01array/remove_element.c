@@ -37,6 +37,6 @@ int main()
     int val = 3;
     int nums_size = sizeof(nums)/sizeof(int);
     int length = remove_element(nums, nums_size, val);
-    printf("新数组的长度为%d \n",length);
+    printf("The length of nums is %d \n",length);
     return 0;
 }
