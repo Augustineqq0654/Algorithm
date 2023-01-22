@@ -34,7 +34,7 @@ void tail_insert(t_list* phead, t_list* new_node)
 void print_node(t_list* phead)
 {
     t_list *p = phead;
-    p = phead->next;
+    //p = phead->next;
     while(p->next!=NULL)
     {
         printf("%d\t",p->val);

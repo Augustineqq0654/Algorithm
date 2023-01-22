@@ -1,4 +1,6 @@
 
+#pragma once
+
 struct list_node{
     int val;
     struct list_node* next;

@@ -17,13 +17,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "list.h"
+#include "list.c"
 
 //定义结点结构体
-struct ListNode{
-    int val;
-    struct ListNode *next;
-};
-typedef struct ListNode t_list;
+// struct ListNode{
+//     int val;
+//     struct ListNode *next;
+// };
+// typedef struct ListNode t_list;
 
 t_list* remove_elements(t_list* head, int val)
 {
@@ -50,23 +52,24 @@ t_list* remove_elements(t_list* head, int val)
     return head;
 }
 
-t_list *create_list_node(int data)
-{
-    t_list *node = NULL;
-    node = (t_list *)malloc(sizeof(t_list));
-    if(node == NULL)
-        printf("malloc fail!\n");
-    memset(node, 0, sizeof(t_list));
-    node->val = data;
-    node->next = NULL;
-    return node;
-}
+// t_list *create_list_node(int data)
+// {
+//     t_list *node = NULL;
+//     node = (t_list *)malloc(sizeof(t_list));
+//     if(node == NULL)
+//         printf("malloc fail!\n");
+//     memset(node, 0, sizeof(t_list));
+//     node->val = data;
+//     node->next = NULL;
+//     return node;
+// }
 
 int main()
 {
     int nums[] = {1,2,6,3,4,5,6};
     int delete_val = 6;
     int length = sizeof(nums)/sizeof(int);
+    
     //创建链表
     t_list *head = create_list_node(0);
     t_list *p = head;
@@ -80,16 +83,18 @@ int main()
     }
     printf("\n");
     
-    //打印输出
     t_list *p2 = head->next;
     remove_elements(p2, delete_val);
-    printf("删除元素后链表：\n");
-    while(p2->next != NULL)
-    {
-        printf("%d\t", p2->val);
-        p2 = p2->next;
-    }
-    printf("%d\n",p2->val);
+    printf("删除元素 %d 后链表：\n", delete_val);
+    
+    //打印输出
+    // while(p2->next != NULL)
+    // {
+    //     printf("%d\t", p2->val);
+    //     p2 = p2->next;
+    // }
+    // printf("%d\n",p2->val);
+    print_node(p2);
 
     return 0;
 }
