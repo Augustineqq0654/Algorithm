@@ -42,3 +42,45 @@ void print_node(t_list* phead)
     }
     printf("%d\n", p->val);
 }
+
+//交换相邻链表节点
+t_list* swap_pairs(t_list* head)
+{
+    // 使用双指针避免中间变量
+    t_list* fakehead = malloc(sizeof(t_list));
+    fakehead->next = head;
+    t_list* right = fakehead->next;
+    t_list* left = fakehead;
+    while(left&&right&&right->next)
+    {
+        left->next = right->next;
+        right->next = left->next->next;
+        left->next->next = right;
+        left = right;
+        right = left->next;
+    }
+    return fakehead->next;
+}
+
+//删除链表的倒数第N个节点
+t_list* remove_nth_from_end(t_list* head, int n)
+{
+    //定义虚拟头结点
+    t_list* dummy = malloc(sizeof(t_list));
+    dummy->val = 0;
+    dummy->next = head;
+    //定义双指针
+    t_list* slow = dummy;
+    t_list* fast = head;
+    for(int i=0; i<n; i++)
+        fast = fast->next;
+    while(fast)
+    {
+        fast = fast->next;
+        slow = slow->next;
+    }
+    slow->next = slow->next->next;  //删除倒数第 N 个节点
+    head = dummy->next;
+    free(dummy);
+    return head;
+}
