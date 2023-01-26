@@ -84,3 +84,47 @@ t_list* remove_nth_from_end(t_list* head, int n)
     free(dummy);
     return head;
 }
+
+//链表相交
+t_list* get_intersection_node(t_list* headA, t_list* headB)
+{
+    t_list* l = NULL, *s = NULL;
+    int lenA = 0, lenB = 0, gap = 0;
+    //求两个链表的长度
+    s = headA;
+    while(s)
+    {
+        lenA++;
+        s = s->next;
+    }
+    s = headB;
+    while(s)
+    {
+        lenB++;
+        s = s->next;
+    }
+
+    //求两个链表的长度差
+    if(lenA>lenB)
+    {
+        l = headA, s = headB;
+        gap = lenA - lenB;
+    }
+    else
+    {
+        l = headB, s = headA;
+        gap = lenB - lenA;
+    }
+
+    //尾部对齐
+    while(gap--)
+        l = l->next;
+    //移动，检查是否有相同元素
+    while(l)
+    {
+        if(l==s) 
+            return l;
+        l = l->next, s = s->next;
+    }
+    return NULL;
+}
