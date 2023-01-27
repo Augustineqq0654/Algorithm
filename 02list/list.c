@@ -128,3 +128,26 @@ t_list* get_intersection_node(t_list* headA, t_list* headB)
     }
     return NULL;
 }
+
+//检测是否是环形链表
+t_list* detect_cycle(t_list* head)
+{
+    t_list *fast = head, *slow = head;
+    while(fast && fast->next)
+    {
+        //判断两个指针是否相等
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow == fast)
+        {
+            t_list *f = fast, *h = head;
+            while(f!=h)
+            {
+                f = f->next;
+                h = h->next;
+            }
+            return h;
+        }
+    }
+    return NULL;
+}
