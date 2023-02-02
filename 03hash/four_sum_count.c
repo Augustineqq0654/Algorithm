@@ -16,6 +16,7 @@ D = [ 0, 2]
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <uthash.h>
 
 struct hash_table{
 	int key;
@@ -48,7 +49,7 @@ int four_sum_count(int *A, int A_size, int *B, int B_size, \
 	int ans = 0;
 	for(int i=0; i<C_size; i++)
 	{
-		for(int j=0; j<D_sie; j++)
+		for(int j=0; j<D_size; j++)
 		{
 			int ikey = -C[i]-D[j];
 			struct hash_table* tmp;
@@ -58,4 +59,19 @@ int four_sum_count(int *A, int A_size, int *B, int B_size, \
 		}
 	}
 	return ans;
+}
+
+int main()
+{
+	int A[] = {1, 2};
+	int B[] = {-2, -1};
+	int C[] = {-1, 2};
+	int D[] = {0, 2};
+	int A_size = sizeof(A)/sizeof(int);
+	int B_size = sizeof(B)/sizeof(int);
+	int C_size = sizeof(C)/sizeof(int);
+	int D_size = sizeof(D)/sizeof(int);
+	int result = four_sum_count(A, A_size, B, B_size, C, C_size, D, D_size);
+	printf("%d", result);
+	return 0;
 }
