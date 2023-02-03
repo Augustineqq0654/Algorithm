@@ -1,3 +1,6 @@
+/*
+给定两个数组，编写一个函数来计算它们的交集。
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
