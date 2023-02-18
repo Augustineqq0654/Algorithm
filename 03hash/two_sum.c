@@ -40,6 +40,7 @@ void insert(int ikey, int ival)
     }
 }
 
+//哈希表
 int* two_sum_hash(int* nums, int nums_size, int target, int* return_size)
 {
     hashtable = NULL;
@@ -59,8 +60,7 @@ int* two_sum_hash(int* nums, int nums_size, int target, int* return_size)
     return NULL;
 }
 
-
-
+//暴力破解
 int *two_sum(int *nums, int nums_size, int target, int *return_size)
 {
     for(int i=0; i<nums_size; i++)
@@ -79,7 +79,6 @@ int *two_sum(int *nums, int nums_size, int target, int *return_size)
     *return_size = 0;
     return NULL;
 }
-
 
 int main()
 {
