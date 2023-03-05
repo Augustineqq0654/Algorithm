@@ -9,3 +9,4 @@ Algorithm,C
 ### 01 array
 ### 02 list
 ### 03 hash
+### 04 string
