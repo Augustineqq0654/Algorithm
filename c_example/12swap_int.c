@@ -13,6 +13,14 @@ int main()
     b = a-b;
     a = a-b;
     
-    printf("交换后 - \n a = %d, b = %d \n", a, b);    
+    printf("交换后 - \n a = %d, b = %d \n\n", a, b);    
     
+    // 位运算
+    a = a^b;
+    b = a^b;
+    a = a^b;
+    printf("交换后 - \n a = %d, b = %d \n", a, b);
+
+    return 0;
+
 }

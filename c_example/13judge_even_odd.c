@@ -12,5 +12,13 @@ int main()
     else
         printf("%d 是奇数", number);
     
+    printf("\n");
+
+    // 与运算 (方法二)
+    if(number&1)
+        printf("%d 是奇数", number);
+    else
+        printf("%d 是偶数", number);
+    
     return 0;
 }
