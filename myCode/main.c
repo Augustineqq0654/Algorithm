@@ -17,10 +17,16 @@ int main()
     DisplayTable(&sequence_table);
 
     printf("\n-----------Sort-----------\n");
-    int array[10] = {3, 4, 3, 7, 55, 45, 64, 9, 0, 10};
-    //InsertSort(array, sizeof(array)/sizeof(int));
-    MySort(array, sizeof(array)/sizeof(int));
-
+    int array1[10] = {3, 4, 3, 7, 55, 45, 64, 9, 0, 10};
+    int array2[10] = {3, 4, 3, 7, 55, 45, 64, 9, 0, 10};
+    int array3[10] = {3, 4, 3, 7, 55, 45, 64, 9, 0, 10};
+    int array4[10] = {3, 4, 3, 7, 55, 45, 64, 9, 0, 10};
+    int array5[10] = {3, 4, 3, 7, 55, 45, 64, 9, 0, 10};
+    Display(array1, sizeof(array1)/sizeof(int));
+    
+    InsertSort(array1, sizeof(array1)/sizeof(int));
+    MySort(array2, sizeof(array2)/sizeof(int));
+    BubbleSort(array3, sizeof(array3)/sizeof(int));
 
     return 0;
 }
