@@ -14,6 +14,7 @@ void Display(int array[], int length)
 /* 插入排序 */
 void InsertSort(int array[], int length)
 {
+    printf("\n-----------Insert Sort-------------\n");
     int j, temp;
     for(int i=1; i<length; i++){
         if(array[i]<array[i-1]){
@@ -42,6 +43,7 @@ void Swap(int *a, int *b)
 /* 我的排序 */
 void MySort(int array[], int length)
 {
+    printf("\n-----------My Sort-------------\n");
     for(int i=0; i<length-1; i++){
         for(int j=i+1; j<length; j++){
             if(array[i]>array[j]){
@@ -56,6 +58,15 @@ void MySort(int array[], int length)
 /* 冒泡排序 */
 void BubbleSort(int array[], int length)
 {
+    printf("\n-----------Bubble Sort-------------\n");
+    for(int i=0; i<length-1; i++){
+        for(int j=0; j<length-1-i; j++){
+            if(array[j]>array[j+1]){
+                Swap(&array[j], &array[j+1]);
+            }
+        }
+        Display(array, length);
+    }
 
     return;
 }
