@@ -1,0 +1,92 @@
+{
+    "terminal.integrated.profiles.windows": 
+    {
+        "Command Prompt": {
+            "path": "C:\\Windows\\System32\\cmd.exe",
+            "args": ["-NoExit", "/K", "chcp 65001"]
+        },
+        "PowerShell": {
+            "source": "PowerShell",
+            "args": ["-NoExit", "/C", "chcp 65001"]
+        }
+    },
+
+    
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+        },
+        {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+        },
+        {
+        "before": ["K"],
+        "commands": ["lineBreakInsert"],
+        "silent": true
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "code-runner.runInTerminal": true,
+    //"editor.lineNumbers": "relative",
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 13,
+    "explorer.compactFolders": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "Codegeex.Privacy": false,
+    "Codegeex.Survey": false,
+    "masmtasm.ASM.assembler": "MASM",
+    "masmtasm.ASM.emulator": "msdos player",
+    //"clangd.path": "c:\\Users\\kezih\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\16.0.2\\clangd_16.0.2\\bin\\clangd.exe",
+    "git.path": "D:\\Develop_Tools\\Git\\cmd\\git.exe",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "cmake.configureOnOpen": true,
+    "remote.SSH.remotePlatform": {
+        "42.193.123.102": "linux",
+        "10.239.98.198": "linux"
+    },
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Monokai",
+    "git.openRepositoryInParentFolders": "always",
+    //"workbench.editor.tabSizing": "shrink",
+    "workbench.colorCustomizations": {
+        "tab.activeBorder": "#ff0000",
+        //"tab.activeBackground": "#0000ff"
+    },
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.wrapTabs": true, 
+    "search.smartCase": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    "files.autoGuessEncoding": true,
+    "editor.detectIndentation": false,  //关闭检测第一个tab后面就tab
+    "editor.renderControlCharacters": true, //制表符显示->
+    "editor.renderWhitespace": "all", //空格显示...
+    "editor.tabSize": 4,//tab为四个空格
+    "editor.insertSpaces": true,
+    "remote.downloadExtensionsLocally": true,
+    "extensions.autoUpdate": false,
+    "remote.SSH.configFile": "C:\\Users\\10339301\\.ssh\\config",
+    "explorer.confirmDragAndDrop": false,
+    "Codegeex.Comment.LanguagePreference": "中文", //转为空格
+
+}
